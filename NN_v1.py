@@ -8,6 +8,7 @@ from tensorflow import keras
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+# fix pptk viewer on ubuntu 18.06 -> https://github.com/heremaps/pptk/issues/3
 import pptk
 
 
@@ -72,7 +73,7 @@ print "Test label shape: ", label_test[0].shape
 #-----------------------------------------------------------
 startSample = 1
 
-# v = pptk.viewer(data_train[sample])
+# v = pptk.viewer(data_train[1])
 #
 # image = label_train[sample].reshape((120, 120))
 # plt.imshow(image)
@@ -96,11 +97,13 @@ plt.show()
 # Activation fct: hidden layers ReLu, top layer: sigmoid
 #
 #   OPTIMIZATIONS
+#   0) Delete intensity (all intensities equals 0)
 #   1) reduce output layer to eg 3x3
 #   2) Different depth
 #   3) Different width
 #   4) Loss function for images
 #   5) Different optimizer
+
 #
 model = keras.Sequential([
     # First layer, Dense or flatten
