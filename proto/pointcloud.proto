@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package collector_pkg;
+
+
+message Point {
+    float x = 1;
+    float y = 2;
+    float z = 3;
+    float i = 4;
+}
+
+
+message PointCloud {
+    repeated Point points = 1;
+    uint32 seq = 2;
+}
+
+message Costmap {
+  uint32 seq = 1; // Sequence number of Header
+  
+  // The map data, in row-major order, starting with (0,0).  Occupancy probabilities are in the range [0,100].  Unknown is -1.
+  repeated uint32 data = 2;
+
+}
+
+// Our collection file is consists of pointcloud-costmap pairs
+message PointCloudCostmapPair {
+  PointCloud pointcloud = 1;
+  Costmap costmap = 2;
+}
+
+message PairCollection {
+  repeated PointCloudCostmapPair pair = 1;
+}
