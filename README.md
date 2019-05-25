@@ -12,10 +12,10 @@ PointCloud_Costmap_NN
     │   └── datacollection7
     ├── proto                    # Files needed to decode the datacollection
     │   ├── ...
-    │   └── pointcloud_pc2.py    # File to helps you parse datacollection
+    │   └── pointcloud_pc2.py    # File to help you parse datacollection
     ├── Calc_FP_FN.py            # Script to calc false positives and negatives in costmaps
     ├── NN_v1.py                 # Fist Feed Forward Network
-    ├── NN.v2.py                 # Second Feed Forward Network with cross-validation
+    ├── NN_v2.py                 # Second Feed Forward Network with cross-validation
     ├── Test_rotate_data.py      # Script to test rotation of datasamples
     ├── Use_WM.py                # Script to use the trained models
     ├── Visualizer.py            # Script to show samples from collection
