@@ -30,6 +30,7 @@ Next, you can run all scripts including a runparameter the datacollection you wa
 This project used Google's protobuf to save it's recordings. As it gives you less constraints about the size of the datacollections,
 it was the most optimal tool to structure the data. To edit the structure in which the pointcloud and costmaps were saved, you can 
 edit the .proto file. This file can be found in the catkin workspace, included in the portfolio. 
+The datacollection#-files under 'data' directory are used to save the structured data.
 
 ### Neural Networks
 These NN_v# files have some configuration parameters in the beginning. Don't forget to review them before running. 
