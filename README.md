@@ -23,5 +23,13 @@ PointCloud_Costmap_NN
     
     
 ### Setup
-First step is to install all needed libraries. This porject is tested on Python 3.5 and tensorflow 1.13.
-Next, you can run alle scripts with runparameter the datacollection you want to parse.
+First step is to install all needed libraries. This project is tested on Python 3.5 and tensorflow 1.13.
+Next, you can run alle scripts including a runparameter the datacollection you want to parse.
+
+### Protobuf
+This project used Google's protobuf to save it's recordings. As it gives you less constraints about the size of the datacollections,
+it was the most optimal tool to structure the data. To edit the fileformate in which the pointcloud and costmaps were saved, you can 
+edit the .proto file. This file can be found in the catkin workspace, included in the portfolio. 
+
+### Neural Networks
+These NN_v# files have some configuration parameters in the beginning. Don't forget to review them before running. 
